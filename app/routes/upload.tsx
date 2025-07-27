@@ -53,7 +53,7 @@ const Upload = () => {
                 feedback: '',
             }
 
-            await kv.set(`resume:${uuid}`, JSON.stringify(data));
+            await kv.set(resume:${uuid}, JSON.stringify(data));
 
             setStatusText('Analyzing...');
             const feedback = await ai.feedback(
@@ -75,10 +75,10 @@ const Upload = () => {
                 const parsedFeedback = JSON.parse(feedbackText);
                 data.feedback = parsedFeedback;
 
-                await kv.set(`resume:${uuid}`, JSON.stringify(data));
+                await kv.set(resume:${uuid}, JSON.stringify(data));
                 setStatusText('Analysis complete, redirecting...');
 
-                setTimeout(() => navigate(`/resume/${uuid}`), 500);
+                setTimeout(() => navigate(/resume/${uuid}), 500);
 
             } catch (error) {
                 console.error('Error parsing feedback:', error);
@@ -117,12 +117,12 @@ const Upload = () => {
                         key={i}
                         className="absolute rounded-full bg-gradient-to-r from-accent-blue to-accent-purple"
                         style={{
-                            width: `${Math.random() * 300 + 100}px`,
-                            height: `${Math.random() * 300 + 100}px`,
-                            top: `${Math.random() * 100}%`,
-                            left: `${Math.random() * 100}%`,
+                            width: ${Math.random() * 300 + 100}px,
+                            height: ${Math.random() * 300 + 100}px,
+                            top: ${Math.random() * 100}%,
+                            left: ${Math.random() * 100}%,
                             filter: 'blur(80px)',
-                            animation: `float ${Math.random() * 20 + 10}s infinite alternate ease-in-out`,
+                            animation: float ${Math.random() * 20 + 10}s infinite alternate ease-in-out,
                         }}
                     />
                 ))}
